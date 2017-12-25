@@ -1,11 +1,17 @@
-int sum(int *a, int n);
+#include <stdio.h>
 
-int array[2] = {1, 2};
+void multstore(long, long, long *);
 
-int main()
+int main(void)
 {
-    int val = sum(array, 2);
-    printf("%d\n", val);
-
+    long d;
+    multstore(2, 3, &d);
+    printf("2 * 3 --> %ld\n", d);
     return 0;
+}
+
+long multi2(long a, long b)
+{
+    long s = a * b;
+    return s;
 }
